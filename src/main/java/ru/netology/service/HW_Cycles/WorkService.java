@@ -9,16 +9,20 @@ public class WorkService {
 
             for (int month = 0; month < 12; month++){
                 if (money >= threshold) { // Можно ли отдыхать
-                    money -= expenses; // обязательные траты
-                    money -= money / 3; // Траты на отдых
                     count++; // Увеличение месяцев отдыха
+                    money -= expenses; // обязательные траты
+                    money = money / 3; // Траты на отдых
                 } else {
                     money += income; // Заработок
                     money -= expenses; // обязательные траты
                 }
             }
             return count;
+
+
         }
+
     }
+
 
 
